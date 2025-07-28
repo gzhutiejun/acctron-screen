@@ -1,29 +1,49 @@
+import { useEffect, useState } from "react";
 import { IProfile } from "../data-interface/data.interface";
 
-
-
 export default function Profile(profile: IProfile) {
+  const [formattedTime, setFormattedTime] = useState("");
+
+  const updateDateTime = () => {
     const now: Date = new Date();
-    const formattedTime = now.toLocaleTimeString('en-US');
+    const temp: string =
+      now.getFullYear() +
+      "-" +
+      now.getMonth().toString().padStart(2, "0") +
+      "-" +
+      now.getDate().toString().padStart(2, "0") +
+      " " +
+      now.getHours().toString().padStart(2, "0") +
+      ":" +
+      now.getMinutes().toString().padStart(2, "0") +
+      ":" +
+      now.getSeconds().toString().padStart(2, "0");
 
-    return (
-          <div className="acc-right-top-container">
-            <div className="acc-right-top-label">
-              <text className="acc-right-top-label-title"> Date</text>
-              <text className="acc-right-top-label-value"> {formattedTime}</text>
-            </div>
-            <div className="acc-right-top-label">
-              <text className="acc-right-top-label-title"> Bramch</text>
-              <text className="acc-right-top-label-value"> {profile.branch}</text>
-            </div>
-            <div className="acc-right-top-label">
-              <text className="acc-right-top-label-title"> ATM ID</text>
-              <text className="acc-right-top-label-value"> {profile.terminalId}</text>
-            </div>
-          </div>
-  
-    );
-  }
-  
+    setFormattedTime(temp);
+  };
 
-  
+  useEffect(() => {
+    updateDateTime();
+  }, []);
+
+
+  setTimeout(() => {
+    updateDateTime();
+  }, 1000);
+
+  return (
+    <div className="acc-right-top-container">
+      <div className="acc-right-top-label">
+        <label className="acc-right-top-label-value"> {formattedTime}</label>
+      </div>
+      <div className="acc-right-top-label">
+        <label className="acc-right-top-label-title"> Branch</label>
+        <label className="acc-right-top-label-value"> {profile.branch}</label>
+      </div>
+      <div className="acc-right-top-label">
+        <label className="acc-right-top-label-title"> ATM ID</label>
+        <label className="acc-right-top-label-value"> {profile.terminalId}</label>
+      </div>
+    </div>
+  );
+}

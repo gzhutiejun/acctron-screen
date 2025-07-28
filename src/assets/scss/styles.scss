@@ -5,21 +5,24 @@
   font-family: "Open Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: local("Open Sans Regular"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 500;
   font-style: normal;
-  src: local("Open Sans Medium"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: local("Open Sans Medium"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: local("Open Sans Bold"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
 $acc-font-en: "Open Sans" !default;
@@ -36,100 +39,101 @@ $acc-vh: calc(100vh / 768);
 }
 
 html {
-    font-size: $acc-vh;
-  
-    &.resize {
-      @media (height < 768px) {
-        font-size: calc(600 / 768 * 1px);
-      }
-  
-      @media (height >= 768px) and (height < 960px) {
-        font-size: 1px;
-      }
-  
-      @media (height >= 960px) and (height < 1050px) {
-        font-size: calc(960 / 768 * 1px);
-      }
-  
-      @media (height >= 1050px) {
-        font-size: calc(1050 / 768 * 1px);
-      }
+  font-size: $acc-vh;
+
+  &.resize {
+    @media (height < 768px) {
+      font-size: calc(600 / 768 * 1px);
+    }
+
+    @media (height >= 768px) and (height < 960px) {
+      font-size: 1px;
+    }
+
+    @media (height >= 960px) and (height < 1050px) {
+      font-size: calc(960 / 768 * 1px);
+    }
+
+    @media (height >= 1050px) {
+      font-size: calc(1050 / 768 * 1px);
     }
   }
-  
-  body {
-    line-height: 1.5;
-  }
+}
 
-  .acc-root {
-    font-family: $acc-font-en;
-  
-    position: absolute;
-    height: $acc-vh * 768;
-    width: $acc-vw * 1024;
-  }
-  
-  .acc-header {
-    display: flex;
-    align-items: center;
-    height: 80rem;
-    width: 100%;
-    background-color: white;
-  }
-  
-  .acc-logo {
-    background-image: url("../images/acctron-small.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 80rem;
-    margin: 0 10rem;
-    width: 100%;
-  }
+body {
+  line-height: 1.5;
+}
 
-  .acc-header-bank {
-    height:30%;
-    width: 20%;
-    font-size: 20rem;
-    margin: 5rem;
-    text-align: left;
-  }
-  .acc-right-top-container {
-    background-color: transparent;
-    height: 100%;
-    width: 20%;
-    background-color: white;
-    color: black;
-  }
+.acc-root {
+  font-family: $acc-font-en;
 
-  .acc-right-top-label {
-    height:30%;
-    width: 100%;
-    font-size: 10rem;
-    margin: 1rem;
-  }
-  .acc-right-top-label-title {
-    width: 50%;
-    text-align: right;
-  }
+  position: absolute;
+  height: $acc-vh * 768;
+  width: $acc-vw * 1024;
+}
 
-  .acc-right-top-label-value {
-    width: 50%;
-    text-align: left;
-  }
+.acc-header {
+  display: flex;
+  align-items: center;
+  height: 80rem;
+  width: 100%;
+  background-color: white;
+}
 
-  @keyframes play24 {
-    100% {
-      background-position: calc(-100% * 24);
-    }
-  }
+.acc-logo {
+  background-image: url("../images/acctron-small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80rem;
+  margin: 0 10rem;
+  width: 100%;
+}
 
-  .acc-screen {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  
-    height: 100%;
-    width: 100%;
+.acc-header-bank {
+  height: 30%;
+  width: 20%;
+  font-size: 20rem;
+  margin: 5rem;
+  text-align: left;
+}
+.acc-right-top-container {
+  background-color: transparent;
+  height: 100%;
+  width: 20%;
+  background-color: white;
+  color: black;
+}
+
+.acc-right-top-label {
+  height: 30%;
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.acc-right-top-label-title {
+  width: 50%;
+  text-align: right;
+}
+
+.acc-right-top-label-value {
+  width: 50%;
+  text-align: left;
+}
+
+@keyframes play24 {
+  100% {
+    background-position: calc(-100% * 24);
   }
+}
+
+.acc-screen {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
