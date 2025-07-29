@@ -7,42 +7,42 @@ export default function Profile(profile: IProfile) {
   const updateDateTime = () => {
     const now: Date = new Date();
     const temp: string =
-      now.getFullYear() +
-      "-" +
-      now.getMonth().toString().padStart(2, "0") +
-      "-" +
-      now.getDate().toString().padStart(2, "0") +
+      now.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }) +
       " " +
-      now.getHours().toString().padStart(2, "0") +
-      ":" +
-      now.getMinutes().toString().padStart(2, "0") +
-      ":" +
-      now.getSeconds().toString().padStart(2, "0");
-
+      now.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      });
     setFormattedTime(temp);
   };
 
   useEffect(() => {
     updateDateTime();
+    const interval = setInterval(() => {
+      updateDateTime();
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
-
-
-  setTimeout(() => {
-    updateDateTime();
-  }, 1000);
 
   return (
     <div className="acc-right-top-container">
+      <label className="acc-right-top-label-value"> {formattedTime}</label>
+
       <div className="acc-right-top-label">
-        <label className="acc-right-top-label-value"> {formattedTime}</label>
-      </div>
-      <div className="acc-right-top-label">
-        <label className="acc-right-top-label-title"> Branch</label>
+        <label className="acc-right-top-label-title">Branch</label>
         <label className="acc-right-top-label-value"> {profile.branch}</label>
       </div>
       <div className="acc-right-top-label">
-        <label className="acc-right-top-label-title"> ATM ID</label>
-        <label className="acc-right-top-label-value"> {profile.terminalId}</label>
+        <label className="acc-right-top-label-title">ATM ID</label>
+        <label className="acc-right-top-label-value">
+          {" "}
+          {profile.terminalId}
+        </label>
       </div>
     </div>
   );

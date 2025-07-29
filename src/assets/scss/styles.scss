@@ -64,63 +64,6 @@ body {
   line-height: 1.5;
 }
 
-.acc-root {
-  font-family: $acc-font-en;
-
-  position: absolute;
-  height: $acc-vh * 768;
-  width: $acc-vw * 1024;
-}
-
-.acc-header {
-  display: flex;
-  align-items: center;
-  height: 80rem;
-  width: 100%;
-  background-color: white;
-}
-
-.acc-logo {
-  background-image: url("../images/acctron-small.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 80rem;
-  margin: 0 10rem;
-  width: 100%;
-}
-
-.acc-header-bank {
-  height: 30%;
-  width: 20%;
-  font-size: 20rem;
-  margin: 5rem;
-  text-align: left;
-}
-.acc-right-top-container {
-  background-color: transparent;
-  height: 100%;
-  width: 20%;
-  background-color: white;
-  color: black;
-}
-
-.acc-right-top-label {
-  height: 30%;
-  width: 100%;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 0px;
-}
-.acc-right-top-label-title {
-  width: 50%;
-  text-align: right;
-}
-
-.acc-right-top-label-value {
-  width: 50%;
-  text-align: left;
-}
-
 @keyframes play24 {
   100% {
     background-position: calc(-100% * 24);
@@ -136,4 +79,147 @@ body {
 
   height: 100%;
   width: 100%;
+}
+
+.acc-root {
+  font-family: $acc-font-en;
+
+  position: absolute;
+  height: $acc-vh * 768;
+  width: $acc-vw * 1024;
+}
+
+.acc-header {
+  display: flex;
+  align-items: center;
+  height: 80rem;
+  width: 100%;
+  color: white;
+}
+
+.acc-logo {
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80rem;
+  margin: 0 10rem;
+  width: 10%;
+}
+
+.acc-header-bank {
+  height: 30%;
+  width: 10%;
+  font-size: 16rem;
+  margin: 2rem;
+  text-align: left;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 70%;
+  height: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  min-width: 200px;
+  height: 50%;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  padding: 0.25rem;
+  font-size: 10px;
+  height: 100%;
+  color: black;
+}
+
+.search-btn,
+.voice-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0.25rem;
+  height: 100%;
+  color: black;
+}
+
+.acc-right-top-container {
+  background-color: transparent;
+  height: 100%;
+  width: 10%;
+
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0px;
+}
+
+.acc-right-top-label {
+  height: 30%;
+  width: 100%;
+}
+
+.acc-right-top-label-title {
+  width: 50%;
+  text-align: right;
+  margin-right: 0%;
+}
+
+.acc-right-top-label-value {
+  width: 50%;
+  text-align: left;
+  margin-left: 0%;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80rem;
+  background-color: transparent;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-card-container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  gap: 20px;
+  justify-content: center;
+  img {
+    width: 40px;
+    margin-left: 0%;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.card-instruction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 10px;
+  color: white;
+}
+.card-slot-icon {
+  font-size: 10px;
 }
