@@ -7,10 +7,6 @@ export default function Footer() {
           <img src="/images/mastercard.svg" />
           <img src="/images/unionpay.svg" />
         </div>
-        <div className="card-instruction">
-          <span>Please insert your card</span>
-          <div className="card-slot-icon">💳</div>
-        </div>
       </div>
     </div>
   );

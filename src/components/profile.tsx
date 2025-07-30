@@ -31,7 +31,11 @@ export default function Profile(profile: IProfile) {
 
   return (
     <div className="acc-right-top-container">
-      <label className="acc-right-top-label-value"> {formattedTime}</label>
+      <div className="acc-right-top-label">
+        <label className="acc-right-top-label-timestamp">
+          {formattedTime}
+        </label>
+      </div>
 
       <div className="acc-right-top-label">
         <label className="acc-right-top-label-title">Branch</label>
