@@ -640,6 +640,32 @@ body {
   }
 }
 
+.acc-dialog-footer {
+  display: flex;
+
+  > :nth-child(n + 2) {
+    margin-left: 2rem;
+  }
+
+  &.column2 {
+    .acc-button.footer {
+      width: $acc-vw * 300;
+    }
+  }
+
+  &.column3 {
+    .acc-button.footer {
+      width: $acc-vw * 300;
+    }
+  }
+
+  &.column4 {
+    .acc-button.footer {
+      width: $acc-vw * 230;
+    }
+  }
+}
+
 .acc-button.touch {
   border: 1px solid #c8d1d9;
   border-radius: 0;

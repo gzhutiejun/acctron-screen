@@ -43,7 +43,7 @@ export default function Services() {
           );
         })}
       </div>
-      <div className="acc-dialog-footer">
+      <div className="acc-dialog-footer column2">
         {footerButtons?.map((item) => {
           const { textId, iconStyle, accessName } = item;
           return (
