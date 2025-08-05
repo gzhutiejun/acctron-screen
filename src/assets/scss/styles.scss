@@ -186,7 +186,7 @@ body {
   justify-content: center;
 }
 .emv-label-message {
-  font-size: 10px;
+  font-size: 16px;
   color: black;
   padding: 1.5rem 2rem;
   display: flex;
@@ -392,10 +392,11 @@ body {
 .acc-dialog-content {
   background-color: rgba(255, 255, 255, 0.7);
 
-  display: flex;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr );
   min-height: 200rem;
-
+  column-gap: 5px;
+  row-gap: 5px;
   .acc-dialog-item {
     display: flex;
     align-items: flex-start;
@@ -642,26 +643,29 @@ body {
 
 .acc-dialog-footer {
   display: flex;
-
+  justify-content: center;
+  column-gap: 5px;
+  height: 10vh;
+  margin-top: 5vh;
   > :nth-child(n + 2) {
     margin-left: 2rem;
   }
 
   &.column2 {
     .acc-button.footer {
-      width: $acc-vw * 300;
+      width: 20vw;
     }
   }
 
   &.column3 {
     .acc-button.footer {
-      width: $acc-vw * 300;
+      width: 20vw;
     }
   }
 
   &.column4 {
     .acc-button.footer {
-      width: $acc-vw * 230;
+      width: 20vw;
     }
   }
 }
