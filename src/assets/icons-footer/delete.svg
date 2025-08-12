@@ -1,0 +1,9 @@
+<svg viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>icon-delete</title>
+  <g id="svg-delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path
+      d="M19.875,29.625 L19.875,64 C19.875,67.78125 22.96875,70.875 26.75,70.875 L54.25,70.875 C58.03125,70.875 61.125,67.78125 61.125,64 L61.125,29.625 L19.875,29.625 Z M54.25,19.3125 L54.25,12.4375 C54.25,10.375 52.875,9 50.8125,9 L30.1875,9 C28.125,9 26.75,10.375 26.75,12.4375 L26.75,19.3125 L13,19.3125 L13,26.1875 L68,26.1875 L68,19.3125 L54.25,19.3125 Z M47.375,19.3125 L33.625,19.3125 L33.625,15.875 L47.375,15.875 L47.375,19.3125 Z"
+      id="fill-1" fill="#FFF" class="theme-icon-color"
+      transform="translate(40.354167, 39.782738) rotate(0.000000) translate(-40.354167, -39.782738)"></path>
+  </g>
+</svg>
