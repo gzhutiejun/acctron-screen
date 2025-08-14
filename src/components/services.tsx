@@ -25,11 +25,10 @@ export default function Services() {
       iconStyle: "back",
     },
   ];
-  const dialogContentStyle = "row2 column4";
-  const title = "Main Menu";
+  
   return (
     <div className="acc-dialog-container">
-      <div className="acc-dialog-content row2 column3">
+      <div className="acc-dialog-content row2">
         {menuButtons?.map((item) => {
           const { textId, iconStyle, accessName } = item;
           return (

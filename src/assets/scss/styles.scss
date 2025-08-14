@@ -154,27 +154,6 @@ body {
   margin-left: 0%;
 }
 
-.welcome-section {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  height: 40rem;
-}
-
-.welcome-text {
-  font-size: 10px;
-}
-
-.customer-greeting {
-  font-weight: bold;
-  margin-left: 20rem;
-}
-
 .emv-label-container {
   width: 100vw;
   height: 5vh;
@@ -183,10 +162,10 @@ body {
   align-content: center;
   display: flex;
   justify-content: center;
+  margin: 5px;
 }
 .emv-label-message {
   font-size: 16px;
-  color: white;
   padding: 1.5rem 2rem;
   display: flex;
   font-weight: bold;
@@ -229,7 +208,6 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 16px;
-
 }
 
 .acc-animation {
@@ -373,7 +351,8 @@ body {
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   gap: 16px; /* Space between grid items */
   padding: 16px;
-  background-color: #f0f0f0;
+  background-color: transparent;
+  border: 1px solid lightgray;
   justify-content: center;
   width: 60%;
 
@@ -392,7 +371,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   min-height: 200rem;
   column-gap: 5px;
   row-gap: 5px;
@@ -426,22 +405,6 @@ body {
 
     &.no-align {
       align-items: unset;
-    }
-
-    &.border-top {
-      border-top: 2px solid #00495c;
-    }
-
-    &.border-bottom {
-      border-bottom: 2px solid #00495c;
-    }
-
-    &.border-left {
-      border-left: 2px dashed #00495c;
-    }
-
-    &.border-right {
-      border-right: 2px dashed #00495c;
     }
   }
 
@@ -499,47 +462,11 @@ body {
     }
   }
 
-  &.column {
-    flex-direction: column;
-
-    > :nth-child(n + 2) {
-      border-top: 2px solid lightgray;
-    }
-
-    > :last-child.acc-dialog-item {
-      flex: none;
-    }
-  }
-
   &.row2 {
     flex-wrap: wrap;
 
     .acc-button {
       height: 180rem;
-    }
-  }
-
-  &.column2 {
-    width: $acc-vw * 600;
-
-    .acc-button {
-      width: $acc-vw * 300;
-    }
-  }
-
-  &.column3 {
-    width: $acc-vw * 900;
-
-    .acc-button {
-      width: $acc-vw * 300;
-    }
-  }
-
-  &.column4 {
-    width: $acc-vw * 920;
-
-    .acc-button {
-      width: $acc-vw * 230;
     }
   }
 }
@@ -566,7 +493,7 @@ body {
     }
 
     &:active {
-      background-color: white;
+      background-color: lightgray;
     }
 
     &:focus-visible {
@@ -687,7 +614,7 @@ body {
     }
 
     &:active {
-      background-color: white;
+      background-color: lightgray;
     }
   }
 
@@ -765,7 +692,7 @@ body {
     }
 
     &:active {
-      background-color: #66c1d8;
+      background-color: lightgray;
     }
   }
 

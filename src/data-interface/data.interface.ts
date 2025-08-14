@@ -7,6 +7,7 @@ export interface IProfile {
 
 export interface IEmvData {
   label?: string;
+  aid?: string;
 }
 
 export interface ButtonData {
